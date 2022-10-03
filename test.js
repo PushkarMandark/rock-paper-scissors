@@ -19,7 +19,7 @@ function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
   computerSelection = computerSelection.toLowerCase();
   if (playerSelection == computerSelection) {
-    return "Draw both selected same";
+    return `"Draw both selected same" ${playerSelection}`;
   } else if (playerSelection == "rock" && computerSelection == "paper") {
     return "You lose ! paper beats rock";
   } else if (playerSelection == "paper" && computerSelection == "rock") {
@@ -37,8 +37,11 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-computer = getComputerChoice();
+function game() {
+  for (let i = 0; i < 5; i++) {
+    let computer = getComputerChoice();
+    console.log(playRound(window.prompt(), computer));
+  }
+}
 
-console.log(playRound("Rock", computer));
-console.log(playRound("scissors", computer));
-console.log(playRound("paper", computer));
+game();
