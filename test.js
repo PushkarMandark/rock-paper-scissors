@@ -103,6 +103,8 @@ function updateHumanScore() {
   return (humanScoreDiv.textContent = humanScore);
 }
 
+// old function
+
 // function game() {
 //   for (let i = 0; i < 5; i++) {
 //     let computer = getComputerChoice();
